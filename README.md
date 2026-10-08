@@ -1,28 +1,46 @@
-# isaakhayes
+# Isaak S. Hayes: Portfolio
 
-Placeholder personal site for Isaak Hayes, product design leader and founder. The full site is still being built.
+Live site: **https://ihcreative.github.io**
 
-**Live:** https://ihcreative.github.io/isaakhayes/
+The portfolio of a product and design leader. Four case studies (Confetti, Meta Help Center, Data Import Wizard and Zuri AI), a short career record, and how I lead. Each case study can also be run as a slide presentation.
 
-## What's here
+## What's inside
 
-One file, `index.html`. The CSS, JavaScript, and photos are all inside it, so there is nothing else to deploy.
+index.html                         Home: work, record, how I lead, contact
+case-study-confetti.html
+case-study-help-center.html
+case-study-data-import-wizard.html
+case-study-zuri.html
+assets/images/                     Cover images, case study images, share image
 
-- A starfield background, and a button that sends it into warp speed
-- A stack of photo cards you can drag, tap, or shuffle
-- A fake build bar that gets stuck at 99% on purpose
-- Links to FINISH, GitHub, and Tally Up
+## How it's built
 
-## Edit it
+- Plain HTML, CSS and JavaScript. No build step, no frameworks, no dependencies.
+- Every page is self-contained, with its styles and scripts inline.
+- Typeface: Jost, loaded from Google Fonts.
+- Images are WebP, with a JPG share image for link previews.
+- Responsive from 320px up, keyboard friendly, and it respects the reduced-motion setting.
+- Hosted on GitHub Pages from the main branch, root folder.
 
-- **Copy:** search `index.html` for the text you want to change (the bio, the status messages, the footer).
-- **Photos:** each card holds one embedded JPEG. To swap a photo, replace the long `data:image/jpeg;base64,...` string in that card's `<img src>`. Keep photos around 600px wide to keep the file light.
-- **Shuffle speed:** change `3800` (milliseconds) near the bottom of the script.
+## Run it locally
 
-## Deploy
+python3 -m http.server 8000
 
-GitHub Pages serves `index.html` from the root of the main branch. Commit a change and the site updates within a minute or two.
+Then open http://localhost:8000. Keep index.html and the assets folder together, or the images won't load.
 
-## Related
+## Live demos
 
-- [Tally Up](https://ihcreative.github.io/calculatorSite/), a tiny budget toy: https://github.com/ihcreative/calculatorSite
+- Data Import Wizard: https://github.com/ihcreative/data-import-wizard
+- Zuri chat demo: https://github.com/ihcreative/zuri-chat-demo
+
+The case studies embed them under "Try It."
+
+## Contact
+
+For roles or collaboration, message me on LinkedIn: https://www.linkedin.com/in/isaakhayes
+
+## Copyright
+
+© 2026 Isaak S. Hayes. All rights reserved. The code is public so you can see how the site is built. Please don't copy the design, writing or images.
+
+Meta, Facebook, Instagram, WhatsApp, Oculus and Salesforce are trademarks of their respective owners. This site describes my own design work and is not affiliated with or endorsed by them.
