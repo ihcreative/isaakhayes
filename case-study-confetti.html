@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Product and design leadership for Facebook's first interactive game show, live in 8 countries.">
+<meta property="og:title" content="Confetti | Isaak Hayes">
+<meta property="og:description" content="Product and design leadership for Facebook's first interactive game show, live in 8 countries.">
+<meta content="website" property="og:type"/>
+<title>Confetti | Isaak Hayes</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #0f1729;
+      --off-white: #f8f7f4;
+      --terracotta: #c4603a;
+      --text-dark: #1a1a1a;
+      --text-secondary: #706b65;
+      --bg-grain: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.03) 1px, transparent 1px);
+      --bg-grain-size: 40px;
+    }
+
+    html, body {
+      font-family: 'Jost', sans-serif;
+      background-color: var(--off-white);
+      background-image: var(--bg-grain);
+      background-size: var(--bg-grain-size) var(--bg-grain-size);
+      color: var(--text-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background-color: var(--navy);
+      color: var(--off-white);
+      padding: 2rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header a {
+      color: var(--off-white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    header a:hover {
+      color: var(--terracotta);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      margin-bottom: 4rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+
+    .hero .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 3rem;
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .meta-label {
+      font-weight: 600;
+      color: var(--text-dark);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Section Structure */
+    section {
+      margin-bottom: 5rem;
+    }
+
+    .section-header {
+      margin-bottom: 2rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--terracotta);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+
+    .section-intro {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+
+    /* Content blocks */
+    .content-block {
+      margin-bottom: 2.5rem;
+    }
+
+    .content-block h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .content-block p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .content-block ul {
+      list-style: none;
+      margin: 1.5rem 0;
+      padding-left: 0;
+    }
+
+    .content-block li {
+      margin-bottom: 0.75rem;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    .content-block li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--terracotta);
+      font-weight: 600;
+    }
+
+    /* Decision Framework */
+    .framework {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .framework-item {
+      padding: 2rem;
+      background-color: rgba(196, 96, 58, 0.05);
+      border-left: 4px solid var(--terracotta);
+    }
+
+    .framework-item h4 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .framework-item p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    /* Image blocks */
+    .image-container {
+      margin: 2rem 0;
+      background-color: var(--navy);
+      padding: 2rem;
+      border-radius: 0;
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+
+    .image-caption {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-style: italic;
+    }
+
+    /* Metrics / Impact */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .metric {
+      text-align: center;
+    }
+
+    .metric-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--terracotta);
+      margin-bottom: 0.5rem;
+    }
+
+    .metric-label {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    /* Quote / Callout */
+    .callout {
+      padding: 2.5rem;
+      background-color: var(--navy);
+      color: var(--off-white);
+      margin: 2rem 0;
+      border-left: 6px solid var(--terracotta);
+    }
+
+    .callout p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--off-white);
+      margin: 0;
+    }
+
+    .callout .attribution {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .timeline-item {
+      margin-bottom: 2.5rem;
+      padding-left: 2rem;
+      position: relative;
+    }
+
+    .timeline-item:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 12px;
+      height: 12px;
+      background-color: var(--terracotta);
+      border-radius: 50%;
+    }
+
+    .timeline-item:after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 2rem;
+      width: 2px;
+      height: calc(100% + 1rem);
+      background-color: rgba(196, 96, 58, 0.2);
+    }
+
+    .timeline-item:last-child:after {
+      display: none;
+    }
+
+    .timeline-label {
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--terracotta);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-description {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background-color: var(--navy);
+      color: var(--off-white);
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .cta-section h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--off-white);
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--terracotta);
+      color: var(--off-white);
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 0 1rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .cta-button:hover {
+      background-color: #b8541f;
+    }
+
+    .cta-button.secondary {
+      background-color: transparent;
+      border: 2px solid var(--off-white);
+      color: var(--off-white);
+    }
+
+    .cta-button.secondary:hover {
+      background-color: rgba(248, 247, 244, 0.1);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--navy);
+      color: var(--text-secondary);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--off-white);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--terracotta);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section-header h2 {
+        font-size: 1.5rem;
+      }
+
+      .framework {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .hero-meta {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .cta-button {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  
+    .fpo{background:#d92d27;color:#fff;aspect-ratio:16/10;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;text-align:center;padding:1.5rem;border-radius:4px;font-family:'Jost',sans-serif}
+    .fpo-tag{font-weight:900;letter-spacing:.3em;font-size:.85rem;border:2px solid #fff;padding:.15rem .7rem}
+    .fpo-file{font-weight:700;font-size:1.05rem;word-break:break-all}
+    .fpo-spec{font-size:.85rem;opacity:.9}
+    .fpo-desc{font-size:.8rem;opacity:.85;max-width:560px}
+    .todo{border:2px dashed #d92d27;background:rgba(217,45,39,.06);padding:1.1rem 1.4rem;margin:1.5rem 0;border-radius:4px}
+    .todo strong{color:#d92d27;letter-spacing:.12em;font-size:.8rem;display:block;margin-bottom:.3rem}
+    .todo p{margin:0;font-size:.95rem}
+  
+    h1,h2,h3{text-wrap:balance}
+    p{text-wrap:pretty}
+    a:focus-visible{outline:2px solid var(--terracotta);outline-offset:3px}
+    .image-container.real{background:none;padding:0;margin:2.5rem 0}
+    .image-container.real img{width:100%;height:auto;display:block;border-radius:6px}
+    .hero-visual{margin:0 0 3.5rem}
+    .hero-visual.real{margin-top:0}
+    .metrics{margin:0 0 2.5rem}
+    .try-frame{border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 30px 70px rgba(15,23,41,.28);border:1px solid rgba(15,23,41,.12);margin:1.5rem 0 0}
+    .try-bar{display:flex;align-items:center;gap:8px;background:#1b2540;padding:12px 16px}
+    .try-bar span{width:10px;height:10px;border-radius:50%;background:#ff5f57}
+    .try-bar span:nth-child(2){background:#febc2e}.try-bar span:nth-child(3){background:#28c840}
+    .try-bar em{flex:1;font-style:normal;color:rgba(255,255,255,.62);font-size:.8rem;margin-left:10px}
+    .try-bar a{color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;padding:10px 4px}
+    .try-bar a:hover{text-decoration:underline}
+    .try-frame iframe{width:100%;height:680px;border:0;display:block;background:#fff}
+    .cta-section h3{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:.75rem}
+    .cta-section .cta-button{margin:.5rem}
+    .cta-section a:focus-visible{outline-color:#fff}
+    @media(max-width:700px){.metrics{grid-template-columns:1fr;gap:1rem}.try-frame iframe{height:560px}}
+    .section-eyebrow{color:#a84f2f}
+    :root{--eyebrow:#a84f2f;--cta:#a84f2f}
+
+    .snapshot{display:grid;grid-template-columns:repeat(3,1fr);margin:0 0 3.5rem;border-top:2px solid var(--text-dark);border-bottom:1px solid rgba(0,0,0,.14)}
+    .snapshot>div{padding:1.4rem 1.4rem 1.7rem 0}
+    .snapshot>div+div{padding-left:1.4rem;border-left:1px solid rgba(0,0,0,.14)}
+    .snapshot h4{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--eyebrow);margin-bottom:.6rem}
+    .snapshot p{font-size:1rem;line-height:1.5;color:var(--text-dark);margin:0}
+    .present-btn{background:transparent;color:var(--off-white);border:1px solid rgba(255,255,255,.35);border-radius:100px;padding:.55rem 1.1rem;font:600 .8rem 'Jost',sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:all .2s}
+    .present-btn:hover{background:var(--off-white);color:var(--navy)}
+    .present-btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+    #present{position:fixed;inset:0;z-index:2000;background:#0f1729;color:#f8f7f4;display:none}
+    #present.on{display:block}
+    #present .p-stage{position:absolute;inset:0 0 68px 0;overflow-y:auto;display:flex;padding:5vh 6vw}
+    #present .p-slide{max-width:1080px;width:100%;margin:auto}
+    #present h1{color:#fff;font-size:clamp(2rem,6.4vw,4.4rem);line-height:1.05}
+    #present h2{color:#fff;font-size:clamp(1.7rem,4.4vw,3.1rem);line-height:1.1}
+    #present h3,#present h4{color:#fff}
+    #present p,#present li,#present .timeline-description{color:rgba(248,247,244,.84);font-size:clamp(1rem,2.1vw,1.45rem);line-height:1.5}
+    #present .subtitle{color:rgba(248,247,244,.8)}
+    #present .meta-item span{color:#fff}#present .meta-label{color:rgba(248,247,244,.6)}
+    #present .section-eyebrow,#present .snapshot h4,#present .timeline-label{color:#f0a283}
+    #present .metric-number{color:#f0a283}#present .metric-label{color:rgba(248,247,244,.78)}
+    #present .snapshot{border-color:rgba(255,255,255,.3)}#present .snapshot>div+div{border-color:rgba(255,255,255,.2)}
+    #present .snapshot p,#present .content-block p,#present .timeline-title{color:#fff}
+    #present .callout{background:rgba(255,255,255,.07)}
+    #present .image-container,#present .image-container.real{margin:0;padding:0;background:none}
+    #present .image-container img{max-height:68vh;width:auto;max-width:100%;margin:auto}
+    #present .try-frame iframe{height:60vh}
+    #present .cta-section{background:none;padding:0;text-align:left}
+    #present .cta-section a{margin:.5rem .5rem .5rem 0}
+    #present .p-ui{position:absolute;left:0;right:0;bottom:0;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-top:1px solid rgba(255,255,255,.14);background:#0f1729}
+    #present .p-ui button{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:100px;min-width:48px;height:44px;padding:0 18px;font:600 .85rem 'Jost',sans-serif;cursor:pointer}
+    #present .p-ui button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+    #present .p-count{color:rgba(255,255,255,.7);font:500 .85rem 'Jost',sans-serif;letter-spacing:.1em}
+    .cs-caption{font-size:.9rem;color:var(--text-secondary);margin:-2.2rem 0 3rem;max-width:640px}
+    .cs-sources{font-size:.8rem;line-height:1.6;color:var(--text-secondary);margin:2rem 0 0;max-width:680px}
+    .cs-sources a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+    .callout .attribution{color:rgba(248,247,244,.74)}
+    .cta-button:not(.secondary){background-color:var(--cta)}
+    .cta-button:not(.secondary):hover{filter:brightness(.88)}
+    footer p{color:rgba(248,247,244,.7)}
+    footer a{color:#fff}
+    header a{display:inline-flex;align-items:center;min-height:44px}
+    .present-btn{min-height:44px}
+    .image-container.real img{border-radius:12px}
+    .try-frame{border-radius:12px}
+    @media(max-width:700px){.snapshot{grid-template-columns:1fr}.snapshot>div,.snapshot>div+div{padding:1.1rem 0 1.2rem;border-left:0;border-top:1px solid rgba(0,0,0,.14)}.snapshot>div:first-child{border-top:0}.present-btn{padding:.5rem .9rem}}
+  </style>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230f1729' stroke='%23c4603a' stroke-width='4'/%3E%3Cpath d='M12 64c2-12 12-16 20-16s18 4 20 16z' fill='%23efece6'/%3E%3Cellipse cx='32' cy='29' rx='11.5' ry='15' fill='%237a4a32'/%3E%3Cpath d='M20.5 30c0 11 5 18 11.5 18s11.5-7 11.5-18c-2 5-4 6-7 6-2-2-7-2-9 0-3 0-6-1-7-6z' fill='%231b1411'/%3E%3Crect x='20.5' y='24' width='10' height='7' rx='3' fill='none' stroke='%2315110f' stroke-width='2.4'/%3E%3Crect x='33.5' y='24' width='10' height='7' rx='3' fill='none' stroke='%2315110f' stroke-width='2.4'/%3E%3C/svg%3E" rel="icon"/><meta content="#0f1729" name="theme-color"/><meta content="https://ihcreative.github.io/assets/images/og-image.jpg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/></head>
+<body>
+<header><a href="index.html">← Back to Portfolio</a><button id="presentBtn" class="present-btn" type="button" aria-label="Present this case study as slides">Present ▸</button></header>
+<div class="container">
+<section class="hero"><h1>Making a Live Audience Feel Like One Room</h1><p class="subtitle">Facebook's first interactive game show launched in eight countries. I led product and design to make a real-time experience hold up under load, abuse and scale.</p><div class="hero-meta"><div class="meta-item"><span class="meta-label">Role</span><span>Product Design Lead</span></div><div class="meta-item"><span class="meta-label">Company</span><span>Meta (Facebook Watch)</span></div><div class="meta-item"><span class="meta-label">Team</span><span>Engineering, research, production, integrity</span></div><div class="meta-item"><span class="meta-label">Reach</span><span>8 countries</span></div></div></section>
+<div class="metrics"><div class="metric"><div class="metric-number">8</div><div class="metric-label">Countries, from the US to Thailand and India</div></div><div class="metric"><div class="metric-number">1M</div><div class="metric-label">Daily active players across all markets, with Mexico the highest (Meta metrics)</div></div><div class="metric"><div class="metric-number">#1</div><div class="metric-label">Highest daily active viewers on Facebook Watch at the time, passing Red Table Talk (Meta metrics)</div></div></div>
+<div class="image-container real hero-visual"><img src="assets/images/confetti-hero.webp" alt="Confetti player journey map: from joining a live show to playing, winning and inviting friends" width="1800" height="760" fetchpriority="high"></div>
+<div class="snapshot"><div><h4>I owned</h4><p>Product and design direction for a live, real-time game show.</p></div><div><h4>Team and scope</h4><p>Engineering, research, production and integrity teams across multiple regions.</p></div><div><h4>The call I made</h4><p>Favor interactions that stay reliable under load over ones that look richer. A late interaction is a broken one.</p></div></div>
+<section>
+<div class="section-header"><span class="section-eyebrow">The Situation</span>
+<h2>A Live Show With No Retakes</h2></div>
+<div class="content-block">
+<h3>What I Led Into</h3>
+<p>Confetti was Facebook's first interactive trivia game show, live on Facebook Watch, a home that reached 400M+ people a month. The raw material was cutting-edge live features. The job was to turn them into a stable, highly engaging product that could scale globally and safely, without breaking under real-time load or abuse.</p>
+</div>
+<div class="content-block">
+<h3>The Opportunity</h3>
+<p>In live, the interaction is the product, not the video around it. The opportunity was to design the moment a viewer becomes a player, and make it reliable enough to repeat every day.</p>
+</div>
+</section>
+<section>
+<div class="section-header"><span class="section-eyebrow">The Bet</span>
+<h2>Design for the Shared Moment</h2></div>
+<div class="content-block">
+<p>Confetti ran as a state-machine-driven experience, so every moment had to account for latency, real-time state and safety at scale. I judged each decision by one test: does this make a huge audience feel like one room, and will it still work when the room gets bigger?</p>
+</div>
+</section>
+<section>
+<div class="section-header"><span class="section-eyebrow">What I Led</span>
+<h2>From Live Feature to Global Format</h2></div>
+<div class="timeline"><div class="timeline-item"><div class="timeline-label">Listen</div><div class="timeline-title">Weekly feedback loops</div><div class="timeline-description">Ran weekly user and creator feedback loops so the show was shaped by what players and hosts actually experienced.</div></div><div class="timeline-item"><div class="timeline-label">Simplify</div><div class="timeline-title">A shorter path to play</div><div class="timeline-description">Simplified join and eligibility flows to shrink the gap between watching and playing.</div></div><div class="timeline-item"><div class="timeline-label">Tune</div><div class="timeline-title">Experiments on live data</div><div class="timeline-description">Kept a rapid experiment cadence and tuned show mechanics with live data, episode by episode, including tests of notifications as an audience driver.</div></div><div class="timeline-item"><div class="timeline-label">Scale</div><div class="timeline-title">Safe by default, then reusable</div><div class="timeline-description">Built safety checks into every feature release, and turned what worked into reusable interaction patterns.</div></div></div>
+</section>
+<section>
+<div class="section-header"><span class="section-eyebrow">Craft Decisions</span>
+<h2>Four Moves That Mattered</h2></div>
+<div class="content-block">
+<h3>1. Fewer Steps Between Watching and Playing</h3>
+<p>Every extra step in the join and eligibility flow is a player lost before the first question. I cut it to what a live moment can tolerate.</p>
+</div>
+<div class="content-block">
+<h3>2. Latency as a Design Material</h3>
+<p>We designed to a target latency under 50 milliseconds. I made deliberate latency and interaction tradeoffs: a rich interaction that arrives late is a broken one, so we favored the ones that stayed reliable under load.</p>
+</div>
+<div class="content-block">
+<h3>3. Safety Inside the Release</h3>
+<p>Safety checks shipped with every feature instead of chasing it. With integrity teams in the room from the start, abuse handling was part of the design, not a patch.</p>
+</div>
+<div class="content-block">
+<h3>4. Notifications as the Growth Lever</h3>
+<p>The show's survival depended on daily active viewers, so we tested notifications as an audience driver. They proved to be the biggest lever on Facebook, so effective that Facebook later had to limit how other teams could use them.</p>
+</div>
+</section>
+<section>
+<div class="section-header"><span class="section-eyebrow">Impact &amp; Outcome</span>
+<h2>What It Added Up To</h2></div>
+<div class="content-block">
+<p>Across all markets Confetti reached about 1M daily active players, and Mexico was the highest, with 24,000+ players per episode and coverage in Mexican and international press. At its peak, Confetti had the most daily active viewers on Facebook Watch, passing Red Table Talk, which had held that spot (Meta's internal metrics). Facebook's own 2018 numbers also named it the most-commented show on Watch. It launched in the US first, then Canada, Mexico, the UK, India, Thailand, Vietnam and the Philippines, and the US and Mexico were the strongest. Facebook wound the show down in 2019, but the reusable interaction patterns we built were adopted by other live formats, so the work outlived the show.</p>
+</div>
+<div class="callout"><p>Build the interaction so a huge audience feels like one room.</p><div class="attribution">The principle behind the work</div></div>
+<p class="cs-sources">Sources: <a href="https://www.tvinsider.com/737992/sorry-for-your-loss-sacred-lies-renewed-facebook-watch/" target="_blank" rel="noopener">Facebook Watch update, Dec 2018</a> &middot; <a href="https://about.fb.com/ltam/news/2018/12/facebook-watch-lo-que-hemos-construido-y-lo-que-esta-por-venir" target="_blank" rel="noopener">Facebook Newsroom, Dec 2018</a> &middot; <a href="https://www.engadget.com/2019-10-15-facebooks-confetti-cancelled.html" target="_blank" rel="noopener">Show wound down, Oct 2019 (Engadget)</a> &middot; <a href="https://www.easternmirrornagaland.com/facebook-launches-1st-interactive-game-show-in-india" target="_blank" rel="noopener">Launch markets, IANS, June 2019</a></p>
+</section>
+<section class="cta-section"><h3>Let's talk.</h3><p style="margin-bottom:1.5rem;color:rgba(248,247,244,.78);max-width:520px;margin-left:auto;margin-right:auto">I'm open to product design leadership roles. If this is the kind of thinking you need, I'd like to hear about it. Hiring? Put the role in the subject line. Selling a service? I'm not buying.</p><a href="#" class="cta-button" data-mail>Email about a role</a><a href="index.html#work" class="cta-button secondary">More work</a></section>
+</div>
+<footer><p>Isaak Hayes / Product Design Leader / 20 Years / <a href="index.html">Portfolio</a></p></footer>
+<script>
+(function(){
+  var btn=document.getElementById('presentBtn');if(!btn)return;
+  var ov,stage,count,slides=[],i=0,x0=null;
+  function parts(){
+    var c=document.querySelector('.container'),kids=[].slice.call(c.children).filter(function(e){return !e.classList.contains('todo')});
+    return kids.map(function(e){return [e]});
+  }
+  function build(){
+    ov=document.createElement('div');ov.id='present';ov.setAttribute('role','dialog');ov.setAttribute('aria-label','Presentation mode');
+    ov.innerHTML='<div class="p-stage"><div class="p-slide"></div></div><div class="p-ui"><button type="button" data-a="prev" aria-label="Previous slide">&larr;</button><span class="p-count"></span><span><button type="button" data-a="next" aria-label="Next slide">&rarr;</button> <button type="button" data-a="close" aria-label="Exit presentation">Exit</button></span></div>';
+    document.body.appendChild(ov);stage=ov.querySelector('.p-slide');count=ov.querySelector('.p-count');
+    ov.querySelector('.p-ui').addEventListener('click',function(e){var a=e.target.getAttribute('data-a');if(a==='next')go(1);if(a==='prev')go(-1);if(a==='close')close()});
+    ov.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+    ov.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>70)go(d<0?1:-1);x0=null});
+  }
+  function show(n){
+    i=Math.max(0,Math.min(slides.length-1,n));
+    stage.innerHTML=slides[i].map(function(e){var c=e.cloneNode(true);if(c.querySelector&&c.querySelector('.try-frame')){}return c.outerHTML}).join('');
+    stage.parentNode.scrollTop=0;count.textContent=(i+1)+' / '+slides.length;
+  }
+  function go(d){show(i+d)}
+  function open(){if(!ov)build();slides=parts();ov.classList.add('on');document.body.style.overflow='hidden';show(0);ov.querySelector('[data-a=next]').focus()}
+  function close(){ov.classList.remove('on');document.body.style.overflow='';stage.innerHTML='';btn.focus()}
+  btn.addEventListener('click',open);
+  document.addEventListener('keydown',function(e){
+    if(!ov||!ov.classList.contains('on'))return;
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();go(1)}
+    else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1)}
+    else if(e.key==='Escape'){close()}
+  });
+})();
+</script>
+<script>
+(function(){
+  function addr(){return ['isaak','hayes+portfolio'].join('')+'@'+['gmail','com'].join('.')}
+  function link(){return 'mailto:'+addr()+'?subject='+encodeURIComponent('Role: ')+'&body='+encodeURIComponent('Company:\r\nRole:\r\nLink to the posting:\r\n')}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-mail]');if(a){e.preventDefault();window.location.href=link()}});
+})();
+</script>
+</body>
+</html>
